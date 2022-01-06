@@ -57,3 +57,18 @@ struct PersonModel {
         return person
     }
 }
+
+// MARK - DeveloperModel
+
+struct DeveloperModel {
+    let name: String
+    let title: String
+    let image: String
+    
+    static func getDeveloperModel() -> [DeveloperModel] {
+        [
+            DeveloperModel(name: "Sergey B", title: "Team leader", image: "sergey"),
+            DeveloperModel(name: "Alexander Panin", title: "Developer", image: "alexander")
+        ]
+    }
+}
