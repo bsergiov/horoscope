@@ -14,36 +14,34 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var monthTextField: UITextField!
     
     var datePerson: String = ""
+    var signModel: SignModel!
+    var delegate: HomeViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Введите \n День и Месяц рождения:"
         
-        addDoneTextFields(for: dayTextField, monthTextField)
+        dayTextField.text = "24"
+        monthTextField.text = "03"
         
         dayTextField.delegate = self
         monthTextField.delegate = self
     }
     
-    @IBAction func doneButton(_ sender: UIButton) {
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let aboutVC = segue.destination as? AboutViewController else {return}
+        aboutVC.signModel = signModel
     }
     
-//    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-//        dayTextField.text = ""
-//        monthTextField.text = ""
-//    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    @IBAction func doneButton(_ sender: UIButton) {
+    dayTextField.text = ""
+    monthTextField.text = ""
+    }
 }
+
+   
 extension HomeViewController {
     
     // MARK: - Alert controller
@@ -79,10 +77,10 @@ extension HomeViewController:  UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newDate = textField.text else { return }
         guard let date = Int(newDate) else {
-            showAlert(title: "Please", message: "Enter integer numbers of days or months", field: textField)
+            showAlert(title: "Please", message: "1-Enter integer numbers of days or months", field: textField)
             return
         }
-        if date == 0 || date > 31 { showAlert(title: "Please", message: "Enter an integer numbers of days or months", field: textField)
+        if date == 0 || date > 31 { showAlert(title: "Please", message: "2-Enter an integer numbers of days or months", field: textField)
             return
         }
         switch textField {
@@ -90,61 +88,32 @@ extension HomeViewController:  UITextFieldDelegate {
             if date <= 12 {
                 datePerson = String(date)
             } else {
-                showAlert(title: "Please", message: "Enter integer numbers of Month (1...12)", field: textField)
+                showAlert(title: "Please", message: "3-Enter integer numbers of Month (1...12)", field: textField)
                 return
             }
         default:
             guard let month = Int(datePerson) else {
-                showAlert(title: "Please", message: "Enter an integer number of Months first", field: textField)
+                showAlert(title: "Please", message: "4-Enter an integer number of Months first", field: textField)
                 return
             }
             switch month {
             case 2:
                 if date > 28 {
-                    showAlert(title: "Please", message: "Enter integer numbers of Days (1...28)", field: textField)
+                    showAlert(title: "Please", message: "5-Enter integer numbers of Days (1...28)", field: textField)
                     return
                 }
                 datePerson += String(date)
             case 4, 6, 9, 11:
                 if date > 30 {
-                    showAlert(title: "Please", message: "Enter integer numbers of Days (1...30)", field: textField)
+                    showAlert(title: "Please", message: "6-Enter integer numbers of Days (1...30)", field: textField)
                     return
                 }
                 datePerson += String(date)
             default:
                 datePerson += String(date)
             }
+            
+            print(datePerson)
         }
-    }
-    
-// MARK - add DONE for TexFields
-    func addDoneTextFields(for textFields: UITextField...) {
-        textFields.forEach { textField in
-            textField.addDoneButtonOnKeyBoardWithControl()
-        }
-    }
-}
-
-// MARK - keyboad add DONE and Action resignFirstResponder
-extension UITextField {
-    
-    func addDoneButtonOnKeyBoardWithControl() {
-        let keyboardToolbar = UIToolbar()
-        keyboardToolbar.sizeToFit()
-        keyboardToolbar.barStyle = .default
-        
-        let flexBarButton = UIBarButtonItem(
-            barButtonSystemItem: .flexibleSpace,
-            target: nil,
-            action: nil)
-        
-        let doneBarButton = UIBarButtonItem(
-            barButtonSystemItem: .done,
-            target: self,
-            action: #selector(self.resignFirstResponder))
-        
-        keyboardToolbar.items = [flexBarButton, doneBarButton]
-    
-        inputAccessoryView = keyboardToolbar
     }
 }

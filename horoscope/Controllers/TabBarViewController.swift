@@ -7,23 +7,61 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+protocol HomeViewControllerDelegate {
+    func setDate(_ date: String) -> SignModel
+}
 
+class TabBarViewController: UITabBarController {
+    
+    let signs = SignModel.getSigns()
+    let sign = SignModel.getSigns()[0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViewControllers()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupViewControllers() {
+        
+        guard let myViewControlers = tabBarController?.viewControllers else { return }
+        for controler in myViewControlers {
+            if let navigationVC = controler as? UINavigationController {
+                let homeVC = navigationVC.topViewController as! HomeViewController
+                homeVC.signModel = sign
+            } else {
+                if let homeVC = controler as? HomeViewController {
+                    homeVC.signModel = sign
+                }
+            }
+        }
     }
-    */
+                
+//
+//
+//        guard let homeVC = viewControllers?.first as? HomeViewController else { return }
+//        guard let sectionVC = viewControllers?.last as? SectionTableViewController else { return }
+//
+//        contactListVC.persons = persons
+//        sectionVC.persons = persons
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        guard let tabBarController = segue.destination as? UITabBarController else {return}
+//        guard let myViewControllers = tabBarController.viewControllers else {return}
+//
+//        for viewController in myViewControllers {
+//            if let homeVC = viewController as? HomeViewController {
+//                homeVC.signModel = sign
+//            } else if let navigationVC = viewController as? UINavigationController {
+//                let homeVC = navigationVC.topViewController as! HomeViewController
+//                homeVC.signModel = sign
+//            }
+//        }
+//    }
+}
 
+extension TabBarViewController: HomeViewControllerDelegate {
+    func setDate(_ date: String) -> SignModel {
+        let sign = SignModel.getSigns()[0]
+        return sign
+    }
 }
