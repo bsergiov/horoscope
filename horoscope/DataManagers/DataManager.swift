@@ -88,7 +88,7 @@ struct DataManger {
 }
 
 // MARK: - Signs
-enum Signs: String {
+enum Signs: String, CaseIterable {
     case aries = "aries"
     case taurus = "taurus"
     case gemini = "gemini"
