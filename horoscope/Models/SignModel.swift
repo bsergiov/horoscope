@@ -41,20 +41,19 @@ struct SignModel {
 // MARK - PersonModel - персональный массив по месяцу
 
 struct PersonModel {
-    static func getPersonModel(from date: String) -> SignModel {
+    static func getPersonModel(from date: Int) -> SignModel {
         let signs = SignModel.getSigns()
-        var person = signs[0]
-        let data = Int(date) ?? 0101
+        var sign = signs[0]
         for index in signs {
             let from = Int(index.fromDate) ?? 101
             let before = Int(index.beforeDate) ?? 101
             if before < from {
-                if data >= from || data <= before { person = index } // проверка переходного периода через декабрь в январь
+                if date >= from || date <= before { sign = index } // проверка переходного периода через декабрь в январь
             } else {
-                if data >= from && data <= before { person = index }
+                if date >= from && date <= before { sign = index }
             }
         }
-        return person
+        return sign
     }
 }
 

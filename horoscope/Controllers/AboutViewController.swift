@@ -19,14 +19,13 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "О знаке"
-        navigationItem.backBarButtonItem?.isEnabled = false
+        navigationItem.hidesBackButton = true
         
         signImage.layer.cornerRadius = 64
         signImage.image = UIImage(named: signModel.signImg)
         
         shortLabel.text = signModel.shortDescription
         fullLabel.text = signModel.longDescription
-        
     }
 
     // MARK: - Navigation

@@ -13,12 +13,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dayTextField: UITextField!
     @IBOutlet weak var monthTextField: UITextField!
     
-    var datePerson: String = ""
+    var datePerson: Int = 0
     var signModel: SignModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = "Введите \n День и Месяц рождения:"
+        titleLabel.text = "Введите\nДень и Месяц рождения:"
         
         dayTextField.delegate = self
         monthTextField.delegate = self
@@ -32,15 +32,38 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
-        datePerson = String(monthTextField.text ?? "01") + String(dayTextField.text ?? "01")
-        signModel = PersonModel.getPersonModel(from: datePerson)
-//        dayTextField.text = ""
-//        monthTextField.text = ""
+        if chekDate() { signModel = PersonModel.getPersonModel(from: datePerson) } else { return }
+        dayTextField.text = ""
+        monthTextField.text = ""
     }
 }
 
-   
+
 extension HomeViewController {
+    
+    private func chekDate() -> Bool {
+        guard let chekDay = dayTextField.text else { return falseChek(dayTextField) }
+        guard let day = Int(chekDay) else { return falseChek(dayTextField)}
+        guard let chekMonth = monthTextField.text else { return falseChek(monthTextField) }
+        guard let month = Int(chekMonth) else { return falseChek(monthTextField) }
+        
+        switch month {
+        case 2:
+            if day > 0 && day <= 28 { datePerson = month * 100 + day } else { return falseChek(dayTextField) }
+        case 4, 6, 9, 11:
+            if day > 0 && day <= 30 { datePerson = month * 100 + day } else { return falseChek(dayTextField) }
+        case 1, 3, 5, 7, 8, 10, 12:
+            if day > 0 && day <= 31 { datePerson = month * 100 + day } else { return falseChek(dayTextField) }
+        default:
+            return falseChek(monthTextField)
+        }
+        return true
+    }
+    
+    private func falseChek(_ textField: UITextField) -> Bool {
+        showAlert(title: "Please", message: "Enter correct number of Months or Days", field: textField)
+        return false
+    }
     
     // MARK: - Alert controller
     
@@ -70,46 +93,5 @@ extension HomeViewController:  UITextFieldDelegate {
             monthTextField.becomeFirstResponder()
         }
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let newDate = textField.text else { return }
-        guard let date = Int(newDate) else {
-            showAlert(title: "Please", message: "Enter integer numbers of days or months", field: textField)
-            return
-        }
-        if date == 0 || date > 31 { showAlert(title: "Please", message: "2-Enter an integer numbers of days or months", field: textField)
-            return
-        }
-        switch textField {
-        case monthTextField:
-            if date <= 12 {
-                datePerson = String(date)
-            } else {
-                showAlert(title: "Please", message: "3-Enter integer numbers of Month (1...12)", field: textField)
-                return
-            }
-        default:
-            guard let month = Int(datePerson) else {
-                showAlert(title: "Please", message: "4-Enter an integer number of Months first", field: textField)
-                return
-            }
-            switch month {
-            case 2:
-                if date > 28 {
-                    showAlert(title: "Please", message: "5-Enter integer numbers of Days (1...28)", field: textField)
-                    return
-                }
-                datePerson += String(date)
-            case 4, 6, 9, 11:
-                if date > 30 {
-                    showAlert(title: "Please", message: "6-Enter integer numbers of Days (1...30)", field: textField)
-                    return
-                }
-                datePerson += String(date)
-            default:
-                datePerson += String(date)
-            }
-        }
     }
 }
