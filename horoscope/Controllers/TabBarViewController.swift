@@ -7,33 +7,34 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate {
-    func setDate(_ date: String) -> SignModel
-}
+//protocol HomeViewControllerDelegate {
+//    func setDate(_ date: String) -> SignModel
+//}
 
 class TabBarViewController: UITabBarController {
     
     let signs = SignModel.getSigns()
-    let sign = SignModel.getSigns()[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewControllers()
+ //       setupViewControllers()
     }
-    private func setupViewControllers() {
-        
-        guard let myViewControlers = tabBarController?.viewControllers else { return }
-        for controler in myViewControlers {
-            if let navigationVC = controler as? UINavigationController {
-                let homeVC = navigationVC.topViewController as! HomeViewController
-                homeVC.signModel = sign
-            } else {
-                if let homeVC = controler as? HomeViewController {
-                    homeVC.signModel = sign
-                }
-            }
-        }
-    }
+}
+//
+//    private func setupViewControllers() {
+//
+//        guard let myViewControlers = tabBarController?.viewControllers else { return }
+//        for controler in myViewControlers {
+//            if let navigationVC = controler as? UINavigationController {
+//                let homeVC = navigationVC.topViewController as! HomeViewController
+//                homeVC.signModel = signs
+//            } else {
+//                if let homeVC = controler as? HomeViewController {
+//                    homeVC.signModel = signs
+//                }
+//            }
+//        }
+//    }
                 
 //
 //
@@ -57,11 +58,11 @@ class TabBarViewController: UITabBarController {
 //            }
 //        }
 //    }
-}
+//}
 
-extension TabBarViewController: HomeViewControllerDelegate {
-    func setDate(_ date: String) -> SignModel {
-        let sign = SignModel.getSigns()[0]
-        return sign
-    }
-}
+//extension TabBarViewController: HomeViewControllerDelegate {
+//    func setDate(_ date: String) -> SignModel {
+//        let sign = SignModel.getSigns()[0]
+//        return sign
+//    }
+//}

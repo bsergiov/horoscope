@@ -14,15 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var monthTextField: UITextField!
     
     var datePerson: String = ""
-    var signModel: SignModel!
-    var delegate: HomeViewControllerDelegate!
+    var signModel: SignModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Введите \n День и Месяц рождения:"
-        
-        dayTextField.text = "24"
-        monthTextField.text = "03"
         
         dayTextField.delegate = self
         monthTextField.delegate = self
@@ -36,8 +32,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
-    dayTextField.text = ""
-    monthTextField.text = ""
+        datePerson = String(monthTextField.text ?? "01") + String(dayTextField.text ?? "01")
+        signModel = PersonModel.getPersonModel(from: datePerson)
+//        dayTextField.text = ""
+//        monthTextField.text = ""
     }
 }
 
@@ -77,7 +75,7 @@ extension HomeViewController:  UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newDate = textField.text else { return }
         guard let date = Int(newDate) else {
-            showAlert(title: "Please", message: "1-Enter integer numbers of days or months", field: textField)
+            showAlert(title: "Please", message: "Enter integer numbers of days or months", field: textField)
             return
         }
         if date == 0 || date > 31 { showAlert(title: "Please", message: "2-Enter an integer numbers of days or months", field: textField)
@@ -112,8 +110,6 @@ extension HomeViewController:  UITextFieldDelegate {
             default:
                 datePerson += String(date)
             }
-            
-            print(datePerson)
         }
     }
 }

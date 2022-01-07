@@ -11,7 +11,7 @@ import Foundation
 
 struct SignModel {
     
-    let sign: Signs
+    let sign: String
     let shortDescription: String
     let longDescription: String
     let titleForecast: String
@@ -25,7 +25,7 @@ struct SignModel {
         for cases in Signs.allCases {
             signs.append(
                 SignModel(
-                    sign: cases,
+                    sign: DataManger.sign[cases] ?? "",
                     shortDescription: DataManger.shortDescription[cases] ?? "",
                     longDescription: DataManger.longDescription[cases] ?? "",
                     titleForecast: DataManger.titleForecast[cases] ?? "",

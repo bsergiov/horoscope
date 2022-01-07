@@ -29,7 +29,7 @@
         <!--DeveloperOne-->
         <scene sceneID="mL0-Uu-7Tb">
             <objects>
-                <viewControllerPlaceholder storyboardName="DeveloperOne" id="DEd-CA-d9i" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DeveloperOne" referencedIdentifier="DeveloperOne" id="DEd-CA-d9i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qyI-5i-L1E"/>
                     <navigationItem key="navigationItem" id="32m-zQ-Eu7"/>
                 </viewControllerPlaceholder>

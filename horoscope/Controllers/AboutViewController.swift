@@ -18,8 +18,15 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         signImage.layer.cornerRadius = 64
-        setViewController()
+        navigationItem.title = "О знаке"
+        navigationItem.backBarButtonItem?.isEnabled = false
+        
+        signImage.layer.cornerRadius = 64
+        signImage.image = UIImage(named: signModel.signImg)
+        
+        shortLabel.text = signModel.shortDescription
+        fullLabel.text = signModel.longDescription
+        
     }
 
     // MARK: - Navigation
@@ -28,10 +35,5 @@ class AboutViewController: UIViewController {
         guard let moreVC = segue.destination as? MoreViewController else {return}
         moreVC.signModel = signModel
     }
-    
-    func setViewController() {
-        signImage.image = UIImage(named: signModel.signImg)
-        shortLabel.text = signModel.shortDescription
-        fullLabel.text = signModel.longDescription
-    }
 }
+

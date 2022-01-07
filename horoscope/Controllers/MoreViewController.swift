@@ -9,12 +9,20 @@ import UIKit
 
 class MoreViewController: UIViewController {
 
+    @IBOutlet weak var signImage: UIImageView!
+    @IBOutlet weak var forecastLabel: UILabel!
+    
     var signModel: SignModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = signModel.sign
 
-        // Do any additional setup after loading the view.
+        signImage.image = UIImage(named: signModel.signImg)
+        signImage.alpha = 0.3
+        
+        forecastLabel.text = signModel.titleForecast
     }
     
 
