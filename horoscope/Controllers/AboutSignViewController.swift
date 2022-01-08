@@ -19,7 +19,7 @@ class AboutSignViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "О знаке"
-        // navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
         
         signImageView.layer.cornerRadius = 64
         signImageView.image = UIImage(named: signModel.signImg)
