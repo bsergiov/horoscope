@@ -30,7 +30,7 @@
         <scene sceneID="mL0-Uu-7Tb">
             <objects>
                 <viewControllerPlaceholder storyboardName="DeveloperOne" referencedIdentifier="DeveloperOne" id="DEd-CA-d9i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="qyI-5i-L1E"/>
+                    <tabBarItem key="tabBarItem" title="Developer One" id="qyI-5i-L1E"/>
                     <navigationItem key="navigationItem" id="32m-zQ-Eu7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90h-Kj-VhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -41,7 +41,7 @@
         <scene sceneID="ZAg-b2-kcG">
             <objects>
                 <viewControllerPlaceholder storyboardName="DeveloperTwo" referencedIdentifier="DeveloperTwo" id="HLQ-EO-EU4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All" image="archivebox" catalog="system" id="VaB-th-2Pa"/>
+                    <tabBarItem key="tabBarItem" title="Developer Two" id="VaB-th-2Pa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ec-Or-Zql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,8 +58,4 @@
             <point key="canvasLocation" x="410" y="506"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="archivebox" catalog="system" width="128" height="106"/>
-        <image name="house" catalog="system" width="128" height="106"/>
-    </resources>
 </document>

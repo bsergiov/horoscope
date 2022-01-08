@@ -10,35 +10,34 @@ import UIKit
 class AllSignsTableViewController: UITableViewController {
     
     
-    var signsModel: [SignModel] = []
+    var signsModel: [SignModel] = SignModel.getSigns()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 128
+        navigationItem.title = "О знаках Зодиака"
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        signsModel.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SignsCell", for: indexPath)
-
-        // Configure the cell...
+        
+        let sign = signsModel[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = sign.sign
+        content.secondaryText = sign.shortDescription
+        content.image = UIImage(named: sign.signImg)
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        
+        cell.contentConfiguration = content
 
         return cell
     }
