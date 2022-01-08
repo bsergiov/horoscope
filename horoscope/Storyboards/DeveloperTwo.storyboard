@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="09Q-gR-xRn" kind="show" trigger="accessoryAction" id="qen-Pp-KEt"/>
+                                    <segue destination="09Q-gR-xRn" kind="show" identifier="showAboutSign" trigger="accessoryAction" id="qen-Pp-KEt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

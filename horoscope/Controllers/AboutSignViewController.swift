@@ -8,26 +8,30 @@
 import UIKit
 
 class AboutSignViewController: UIViewController {
-
+    
     @IBOutlet weak var signImageView: UIImageView!
     @IBOutlet weak var shortLabel: UILabel!
     @IBOutlet weak var fullLabel: UILabel!
     
+    var signModel: SignModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationItem.title = "О знаке"
+        // navigationItem.hidesBackButton = true
+        
+        signImageView.layer.cornerRadius = 64
+        signImageView.image = UIImage(named: signModel.signImg)
+        
+        shortLabel.text = signModel.shortDescription
+        fullLabel.text = signModel.longDescription
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let moreSignVC = segue.destination as? MoreSignViewController else { return }
+        moreSignVC.signModel = signModel
     }
-    */
-
 }
