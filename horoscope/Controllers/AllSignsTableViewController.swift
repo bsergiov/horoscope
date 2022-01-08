@@ -11,34 +11,35 @@ class AllSignsTableViewController: UITableViewController {
     
     
     var signsModel: [SignModel] = SignModel.getSigns()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.rowHeight = 128
-        navigationItem.title = "О знаках Зодиака"
+        navigationItem.title = "Знаки Зодиака"
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         signsModel.count
     }
-
-  
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SignsCell", for: indexPath)
         
         let sign = signsModel[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
+        
         content.text = sign.sign
         content.secondaryText = sign.shortDescription
         content.image = UIImage(named: sign.signImg)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
         cell.contentConfiguration = content
-
+        
         return cell
     }
   
