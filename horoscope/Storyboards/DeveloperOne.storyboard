@@ -139,7 +139,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HFd-cl-FEQ">
-                        <barButtonItem key="rightBarButtonItem" title="More Info" id="DNc-0s-mxh">
+                        <barButtonItem key="rightBarButtonItem" title="About 2022" id="DNc-0s-mxh">
                             <connections>
                                 <segue destination="xlN-67-Axi" kind="show" identifier="goMore" id="XAV-tB-O4g"/>
                             </connections>

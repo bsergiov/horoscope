@@ -20,6 +20,8 @@
 		CC83541A2786FA65007EE4E3 /* DeveloperOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8354192786FA65007EE4E3 /* DeveloperOne.storyboard */; };
 		CC83541C2786FA79007EE4E3 /* DeveloperTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83541B2786FA79007EE4E3 /* DeveloperTwo.storyboard */; };
 		CC83541E2786FB7D007EE4E3 /* DeveloperThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83541D2786FB7D007EE4E3 /* DeveloperThree.storyboard */; };
+		E22678EF278A0C8900115BA2 /* AboutSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */; };
+		E22678F1278A0CA900115BA2 /* MoreSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */; };
 		E2F3A7D1278765BF000FC2C8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */; };
 		E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */; };
 		E2F3A7D6278793C4000FC2C8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */; };
@@ -42,6 +44,8 @@
 		CC8354192786FA65007EE4E3 /* DeveloperOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperOne.storyboard; sourceTree = "<group>"; };
 		CC83541B2786FA79007EE4E3 /* DeveloperTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperTwo.storyboard; sourceTree = "<group>"; };
 		CC83541D2786FB7D007EE4E3 /* DeveloperThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperThree.storyboard; sourceTree = "<group>"; };
+		E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSignViewController.swift; sourceTree = "<group>"; };
+		E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSignViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			children = (
 				CC8354162786F9E9007EE4E3 /* CusomCell */,
 				CC8354172786FA32007EE4E3 /* AllSignsTableViewController.swift */,
+				E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */,
+				E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */,
 			);
 			name = AllSigns;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 				CC8353F32786ED8B007EE4E3 /* AppDelegate.swift in Sources */,
 				E2F3A7D1278765BF000FC2C8 /* TabBarViewController.swift in Sources */,
 				E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */,
+				E22678EF278A0C8900115BA2 /* AboutSignViewController.swift in Sources */,
 				E2F3A7D6278793C4000FC2C8 /* AboutViewController.swift in Sources */,
+				E22678F1278A0CA900115BA2 /* MoreSignViewController.swift in Sources */,
 				CC8353F52786ED8B007EE4E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
