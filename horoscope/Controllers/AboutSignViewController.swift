@@ -1,15 +1,15 @@
 //
-//  AboutViewController.swift
+//  AboutSignViewController.swift
 //  horoscope
 //
-//  Created by Александр Панин on 07.01.2022.
+//  Created by Александр Панин on 08.01.2022.
 //
 
 import UIKit
 
-class AboutViewController: UIViewController {
-
-    @IBOutlet weak var signImage: UIImageView!
+class AboutSignViewController: UIViewController {
+    
+    @IBOutlet weak var signImageView: UIImageView!
     @IBOutlet weak var shortLabel: UILabel!
     @IBOutlet weak var fullLabel: UILabel!
     
@@ -21,18 +21,17 @@ class AboutViewController: UIViewController {
         navigationItem.title = "О знаке"
         navigationItem.hidesBackButton = true
         
-        signImage.layer.cornerRadius = 64
-        signImage.image = UIImage(named: signModel.signImg)
+        signImageView.layer.cornerRadius = 64
+        signImageView.image = UIImage(named: signModel.signImg)
         
         shortLabel.text = signModel.shortDescription
         fullLabel.text = signModel.longDescription
     }
-
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let moreVC = segue.destination as? MoreViewController else { return }
-        moreVC.signModel = signModel
+        guard let moreSignVC = segue.destination as? MoreSignViewController else { return }
+        moreSignVC.signModel = signModel
     }
 }
-
