@@ -17,25 +17,20 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- //       setupViewControllers()
+        setupViewControllers()
+    }
+    
+    private func setupViewControllers() {
+        
+        guard let myViewControlers = tabBarController?.viewControllers else { return }
+        for controler in myViewControlers {
+            if let navigationVC = controler as? UINavigationController {
+                let allSignsVC = navigationVC.topViewController as! AllSignsTableViewController
+                allSignsVC.signsModel = signs
+            }
+        }
     }
 }
-//
-//    private func setupViewControllers() {
-//
-//        guard let myViewControlers = tabBarController?.viewControllers else { return }
-//        for controler in myViewControlers {
-//            if let navigationVC = controler as? UINavigationController {
-//                let homeVC = navigationVC.topViewController as! HomeViewController
-//                homeVC.signModel = signs
-//            } else {
-//                if let homeVC = controler as? HomeViewController {
-//                    homeVC.signModel = signs
-//                }
-//            }
-//        }
-//    }
-                
 //
 //
 //        guard let homeVC = viewControllers?.first as? HomeViewController else { return }
