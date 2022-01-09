@@ -12,12 +12,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dayTextField: UITextField!
     @IBOutlet weak var monthTextField: UITextField!
+    @IBOutlet weak var zodiacImageView: UIImageView!
     
     var datePerson: Int = 0
     var signModel: SignModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        zodiacImageView.image = UIImage(named: "launch")
+        zodiacImageView.alpha = 0.3
+        
         titleLabel.text = "Введите\nДень и Месяц рождения:"
         
         dayTextField.delegate = self
@@ -39,7 +44,6 @@ class HomeViewController: UIViewController {
         monthTextField.text = ""
     }
 }
-
 
 extension HomeViewController {
     

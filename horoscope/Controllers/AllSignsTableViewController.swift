@@ -9,7 +9,6 @@ import UIKit
 
 class AllSignsTableViewController: UITableViewController {
     
-    
     var signsModel: [SignModel] = SignModel.getSigns()
     
     override func viewDidLoad() {
@@ -24,7 +23,6 @@ class AllSignsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         signsModel.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SignsCell", for: indexPath)
@@ -51,14 +49,6 @@ class AllSignsTableViewController: UITableViewController {
         performSegue(withIdentifier: "showAboutSign", sender: track)
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        .none
-    }
-    
-    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        false
-    }
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,5 +59,4 @@ class AllSignsTableViewController: UITableViewController {
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {}
-
 }

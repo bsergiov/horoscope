@@ -20,7 +20,7 @@ class MoreViewController: UIViewController {
         navigationItem.title = signModel.sign
 
         signImage.image = UIImage(named: signModel.signImg)
-        signImage.alpha = 0.3
+        signImage.alpha = 0.2
         
         forecastLabel.text = signModel.titleForecast
     }
