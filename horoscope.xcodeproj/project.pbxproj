@@ -82,9 +82,9 @@
 		CC8353F12786ED8B007EE4E3 /* horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				CC8354082786EE76007EE4E3 /* Controllers */,
 				CC83540B2786EEB3007EE4E3 /* DataManagers */,
 				CC83540A2786EE99007EE4E3 /* Models */,
-				CC8354082786EE76007EE4E3 /* Controllers */,
 				CC8354072786EE65007EE4E3 /* Storyboards */,
 				CC8354092786EE8A007EE4E3 /* Resources */,
 				CC8354062786EDAF007EE4E3 /* SupportFiles */,
