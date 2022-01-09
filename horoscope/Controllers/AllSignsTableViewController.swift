@@ -67,5 +67,7 @@ class AllSignsTableViewController: UITableViewController {
 //        let track = trackList[indexPath.row]
         aboutSignVC.signModel = sender as? SignModel
     }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
 
 }

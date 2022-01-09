@@ -31,6 +31,8 @@ class HomeViewController: UIViewController {
         aboutVC.signModel = signModel
     }
     
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    
     @IBAction func doneButton(_ sender: UIButton) {
         if chekDate() { signModel = PersonModel.getPersonModel(from: datePerson) } else { return }
         dayTextField.text = ""

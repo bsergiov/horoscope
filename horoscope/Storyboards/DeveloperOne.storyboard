@@ -98,7 +98,7 @@
         <!--About View Controller-->
         <scene sceneID="FFY-ei-4Ag">
             <objects>
-                <viewController id="lLU-9d-Iqr" customClass="AboutViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="lLU-9d-Iqr" customClass="AboutViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ya8-h4-KX5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0x8-D9-8FD">
-                                <rect key="frame" x="10" y="246" width="394" height="557"/>
+                                <rect key="frame" x="10" y="246" width="394" height="606"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -158,16 +158,16 @@
         <!--More View Controller-->
         <scene sceneID="LxV-o9-rKA">
             <objects>
-                <viewController id="xlN-67-Axi" customClass="MoreViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="xlN-67-Axi" customClass="MoreViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgY-iu-9Ks">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-77-eN0">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hHc-Sc-JU2">
-                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,13 +186,20 @@
                             <constraint firstItem="Uia-77-eN0" firstAttribute="top" secondItem="4sx-Hm-uWi" secondAttribute="top" id="spw-xY-upz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FFz-TR-Uf7"/>
+                    <navigationItem key="navigationItem" id="FFz-TR-Uf7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="house" catalog="system" id="8EU-Vq-SNp">
+                            <connections>
+                                <segue destination="oSf-Pz-WVI" kind="unwind" unwindAction="unwindWithSegue:" id="TQ1-96-KCi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="forecastLabel" destination="hHc-Sc-JU2" id="bvU-dz-q0d"/>
                         <outlet property="signImage" destination="Uia-77-eN0" id="3gw-6v-uAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFM-NS-rii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oSf-Pz-WVI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1175" y="82"/>
         </scene>
@@ -218,6 +225,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
