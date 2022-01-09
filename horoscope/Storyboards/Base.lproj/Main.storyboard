@@ -50,7 +50,7 @@
         <!--DeveloperThree-->
         <scene sceneID="AP3-lD-EQG">
             <objects>
-                <viewControllerPlaceholder storyboardName="DeveloperThree" id="6Ic-Iv-S6i" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DeveloperThree" referencedIdentifier="DeveloperThree" id="6Ic-Iv-S6i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Blj-zg-6Ob"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vt7-6M-Xn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
