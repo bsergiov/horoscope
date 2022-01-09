@@ -9,7 +9,6 @@ import UIKit
 
 class DevelopersTableViewCell: UITableViewCell {
 
-    
     // MARK: - IB Outlets
     @IBOutlet weak var avaDeveloper: UIImageView!
     
