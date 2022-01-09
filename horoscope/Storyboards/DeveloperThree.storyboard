@@ -1,29 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwJ-fD-TNL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19529"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Developers-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="duj-2d-ouf">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <tableViewController id="nwJ-fD-TNL" customClass="DeveloperTableViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="esW-L7-ma7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Developers" image="person" catalog="system" id="Ycy-TW-kil"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DevelopersTableViewCell" rowHeight="244" id="gbz-fo-iYg" customClass="DevelopersTableViewCell" customModule="horoscope" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="244"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gbz-fo-iYg" id="aCI-f1-wgu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-rZ-gI1">
+                                            <rect key="frame" x="147" y="21" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="MTw-jh-uGv"/>
+                                                <constraint firstAttribute="width" constant="120" id="Nke-AT-X2q"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeveloperName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVF-RH-XbX">
+                                            <rect key="frame" x="40" y="151" width="334" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoleDeveloper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-Y4-jop">
+                                            <rect key="frame" x="40" y="182" width="334" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TlK-Y4-jop" secondAttribute="trailing" constant="20" id="BRd-n1-wuK"/>
+                                        <constraint firstItem="TlK-Y4-jop" firstAttribute="top" secondItem="vVF-RH-XbX" secondAttribute="bottom" constant="10" id="U0Q-Ac-dVw"/>
+                                        <constraint firstItem="vVF-RH-XbX" firstAttribute="leading" secondItem="aCI-f1-wgu" secondAttribute="leadingMargin" constant="20" id="d84-7b-i4R"/>
+                                        <constraint firstItem="TlK-Y4-jop" firstAttribute="leading" secondItem="aCI-f1-wgu" secondAttribute="leadingMargin" constant="20" id="dIl-Hv-LA3"/>
+                                        <constraint firstItem="vVF-RH-XbX" firstAttribute="top" secondItem="Aev-rZ-gI1" secondAttribute="bottom" constant="10" id="gmS-mP-eLX"/>
+                                        <constraint firstItem="Aev-rZ-gI1" firstAttribute="top" secondItem="aCI-f1-wgu" secondAttribute="topMargin" constant="10" id="tiK-Yg-3r3"/>
+                                        <constraint firstItem="Aev-rZ-gI1" firstAttribute="centerX" secondItem="aCI-f1-wgu" secondAttribute="centerX" id="wjh-xm-hit"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vVF-RH-XbX" secondAttribute="trailing" constant="20" id="wrK-WY-ghb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avaDeveloper" destination="Aev-rZ-gI1" id="BpB-nl-3T6"/>
+                                    <outlet property="developerNameLabel" destination="vVF-RH-XbX" id="BaP-YO-6ix"/>
+                                    <outlet property="roleDeveloperLabel" destination="TlK-Y4-jop" id="Mzp-VT-ewo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nwJ-fD-TNL" id="Nsd-qd-ud1"/>
+                            <outlet property="delegate" destination="nwJ-fD-TNL" id="lFm-9J-85O"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Developers" image="person" catalog="system" id="VP4-73-WsW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i88-e0-HIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="94"/>
+            <point key="canvasLocation" x="605.79710144927537" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
