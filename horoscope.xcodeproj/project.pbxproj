@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				CC835423278AE965007EE4E3 /* Developers */,
-				E2F3A7D227876A3C000FC2C8 /* DeveloperOne */,
 				CC8354142786F99C007EE4E3 /* Main */,
 				CC8354152786F9BC007EE4E3 /* AllSigns */,
 			);
@@ -158,6 +157,9 @@
 		CC8354142786F99C007EE4E3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */,
+				E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */,
+				E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */,
 				E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */,
 			);
 			name = Main;
@@ -166,19 +168,11 @@
 		CC8354152786F9BC007EE4E3 /* AllSigns */ = {
 			isa = PBXGroup;
 			children = (
-				CC8354162786F9E9007EE4E3 /* CusomCell */,
 				CC8354172786FA32007EE4E3 /* AllSignsTableViewController.swift */,
 				E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */,
 				E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */,
 			);
 			name = AllSigns;
-			sourceTree = "<group>";
-		};
-		CC8354162786F9E9007EE4E3 /* CusomCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CusomCell;
 			sourceTree = "<group>";
 		};
 		CC835423278AE965007EE4E3 /* Developers */ = {
@@ -196,16 +190,6 @@
 				E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */,
 			);
 			name = CustomCell;
-			sourceTree = "<group>";
-		};
-		E2F3A7D227876A3C000FC2C8 /* DeveloperOne */ = {
-			isa = PBXGroup;
-			children = (
-				E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */,
-				E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */,
-				E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */,
-			);
-			name = DeveloperOne;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
