@@ -24,7 +24,6 @@
 		E22678F1278A0CA900115BA2 /* MoreSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */; };
 		E25909A0278B553C00FDC1E7 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */; };
 		E25909A2278B555500FDC1E7 /* DeveloperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25909A1278B555500FDC1E7 /* DeveloperTableViewController.swift */; };
-		E2F3A7D1278765BF000FC2C8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */; };
 		E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */; };
 		E2F3A7D6278793C4000FC2C8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */; };
 		E2F3A7D8278793D8000FC2C8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */; };
@@ -50,7 +49,6 @@
 		E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSignViewController.swift; sourceTree = "<group>"; };
 		E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
 		E25909A1278B555500FDC1E7 /* DeveloperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperTableViewController.swift; sourceTree = "<group>"; };
-		E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */,
 				E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */,
 				E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */,
-				E2F3A7D0278765BF000FC2C8 /* TabBarViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				CC8354112786EF3B007EE4E3 /* SignModel.swift in Sources */,
 				CC8354132786F06F007EE4E3 /* DataManager.swift in Sources */,
 				CC8353F32786ED8B007EE4E3 /* AppDelegate.swift in Sources */,
-				E2F3A7D1278765BF000FC2C8 /* TabBarViewController.swift in Sources */,
 				E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */,
 				E22678EF278A0C8900115BA2 /* AboutSignViewController.swift in Sources */,
 				E25909A0278B553C00FDC1E7 /* DevelopersTableViewCell.swift in Sources */,
