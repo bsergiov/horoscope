@@ -20,6 +20,13 @@
 		CC83541A2786FA65007EE4E3 /* DeveloperOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8354192786FA65007EE4E3 /* DeveloperOne.storyboard */; };
 		CC83541C2786FA79007EE4E3 /* DeveloperTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83541B2786FA79007EE4E3 /* DeveloperTwo.storyboard */; };
 		CC83541E2786FB7D007EE4E3 /* DeveloperThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83541D2786FB7D007EE4E3 /* DeveloperThree.storyboard */; };
+		E22678EF278A0C8900115BA2 /* AboutSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */; };
+		E22678F1278A0CA900115BA2 /* MoreSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */; };
+		E25909A0278B553C00FDC1E7 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */; };
+		E25909A2278B555500FDC1E7 /* DeveloperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25909A1278B555500FDC1E7 /* DeveloperTableViewController.swift */; };
+		E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */; };
+		E2F3A7D6278793C4000FC2C8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */; };
+		E2F3A7D8278793D8000FC2C8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		CC8354192786FA65007EE4E3 /* DeveloperOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperOne.storyboard; sourceTree = "<group>"; };
 		CC83541B2786FA79007EE4E3 /* DeveloperTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperTwo.storyboard; sourceTree = "<group>"; };
 		CC83541D2786FB7D007EE4E3 /* DeveloperThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperThree.storyboard; sourceTree = "<group>"; };
+		E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSignViewController.swift; sourceTree = "<group>"; };
+		E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSignViewController.swift; sourceTree = "<group>"; };
+		E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
+		E25909A1278B555500FDC1E7 /* DeveloperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperTableViewController.swift; sourceTree = "<group>"; };
+		E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +84,9 @@
 		CC8353F12786ED8B007EE4E3 /* horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				CC8354082786EE76007EE4E3 /* Controllers */,
 				CC83540B2786EEB3007EE4E3 /* DataManagers */,
 				CC83540A2786EE99007EE4E3 /* Models */,
-				CC8354082786EE76007EE4E3 /* Controllers */,
 				CC8354072786EE65007EE4E3 /* Storyboards */,
 				CC8354092786EE8A007EE4E3 /* Resources */,
 				CC8354062786EDAF007EE4E3 /* SupportFiles */,
@@ -109,6 +123,7 @@
 			children = (
 				CC8354142786F99C007EE4E3 /* Main */,
 				CC8354152786F9BC007EE4E3 /* AllSigns */,
+				CC835423278AE965007EE4E3 /* Developers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +155,9 @@
 		CC8354142786F99C007EE4E3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E2F3A7D327876A6A000FC2C8 /* HomeViewController.swift */,
+				E2F3A7D5278793C4000FC2C8 /* AboutViewController.swift */,
+				E2F3A7D7278793D8000FC2C8 /* MoreViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -147,17 +165,28 @@
 		CC8354152786F9BC007EE4E3 /* AllSigns */ = {
 			isa = PBXGroup;
 			children = (
-				CC8354162786F9E9007EE4E3 /* CusomCell */,
 				CC8354172786FA32007EE4E3 /* AllSignsTableViewController.swift */,
+				E22678EE278A0C8800115BA2 /* AboutSignViewController.swift */,
+				E22678F0278A0CA900115BA2 /* MoreSignViewController.swift */,
 			);
 			name = AllSigns;
 			sourceTree = "<group>";
 		};
-		CC8354162786F9E9007EE4E3 /* CusomCell */ = {
+		CC835423278AE965007EE4E3 /* Developers */ = {
 			isa = PBXGroup;
 			children = (
+				CC835424278AEB71007EE4E3 /* CustomCell */,
+				E25909A1278B555500FDC1E7 /* DeveloperTableViewController.swift */,
 			);
-			name = CusomCell;
+			name = Developers;
+			sourceTree = "<group>";
+		};
+		CC835424278AEB71007EE4E3 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				E259099F278B553C00FDC1E7 /* DevelopersTableViewCell.swift */,
+			);
+			name = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F3A7D8278793D8000FC2C8 /* MoreViewController.swift in Sources */,
 				CC8354182786FA32007EE4E3 /* AllSignsTableViewController.swift in Sources */,
 				CC8354112786EF3B007EE4E3 /* SignModel.swift in Sources */,
 				CC8354132786F06F007EE4E3 /* DataManager.swift in Sources */,
 				CC8353F32786ED8B007EE4E3 /* AppDelegate.swift in Sources */,
+				E2F3A7D427876A6A000FC2C8 /* HomeViewController.swift in Sources */,
+				E22678EF278A0C8900115BA2 /* AboutSignViewController.swift in Sources */,
+				E25909A0278B553C00FDC1E7 /* DevelopersTableViewCell.swift in Sources */,
+				E2F3A7D6278793C4000FC2C8 /* AboutViewController.swift in Sources */,
+				E22678F1278A0CA900115BA2 /* MoreSignViewController.swift in Sources */,
+				E25909A2278B555500FDC1E7 /* DeveloperTableViewController.swift in Sources */,
 				CC8353F52786ED8B007EE4E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

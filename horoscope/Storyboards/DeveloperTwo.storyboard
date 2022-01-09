@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yaq-Hm-pnQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,26 +8,169 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--All-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Zodiac Signs -->
+        <scene sceneID="Fia-eJ-olT">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <tableViewController storyboardIdentifier="Allsigns" useStoryboardIdentifierAsRestorationIdentifier="YES" id="41f-ZI-och" customClass="AllSignsTableViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="z2M-mN-nkb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="All" image="circle.hexagongrid.circle" catalog="system" id="F7X-hm-2tm"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SignsCell" id="yCw-6e-MJc">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yCw-6e-MJc" id="nIx-Qw-595">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="09Q-gR-xRn" kind="show" identifier="showAboutSign" trigger="accessoryAction" id="qen-Pp-KEt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="41f-ZI-och" id="Wam-Zd-8mT"/>
+                            <outlet property="delegate" destination="41f-ZI-och" id="QMA-1r-ukd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Zodiac Signs " id="a9h-sT-Mqc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YL8-Ah-iAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="94"/>
+            <point key="canvasLocation" x="-1225" y="13"/>
+        </scene>
+        <!--About Sign View Controller-->
+        <scene sceneID="QVy-9B-ydx">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="09Q-gR-xRn" customClass="AboutSignViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bR-am-9eG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cfo-ma-kgr">
+                                <rect key="frame" x="158" y="98" width="246" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qCL-dz-7pt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-zz-oM1">
+                                <rect key="frame" x="10" y="246" width="394" height="606"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UP-Dl-Zdw">
+                                <rect key="frame" x="10" y="98" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YLr-Vs-gFv"/>
+                                    <constraint firstAttribute="width" constant="128" id="q00-zH-WpO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tRz-pU-On7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8UP-Dl-Zdw" firstAttribute="top" secondItem="tRz-pU-On7" secondAttribute="top" constant="10" id="4zN-Da-XCv"/>
+                            <constraint firstItem="tRz-pU-On7" firstAttribute="bottom" secondItem="TWa-zz-oM1" secondAttribute="bottom" constant="10" id="6Mx-0X-Ykb"/>
+                            <constraint firstItem="tRz-pU-On7" firstAttribute="trailing" secondItem="Cfo-ma-kgr" secondAttribute="trailing" constant="10" id="ECf-qi-bYe"/>
+                            <constraint firstItem="TWa-zz-oM1" firstAttribute="leading" secondItem="tRz-pU-On7" secondAttribute="leading" constant="10" id="TMW-aH-nZn"/>
+                            <constraint firstItem="Cfo-ma-kgr" firstAttribute="leading" secondItem="8UP-Dl-Zdw" secondAttribute="trailing" constant="20" id="lw8-xQ-ECf"/>
+                            <constraint firstItem="8UP-Dl-Zdw" firstAttribute="leading" secondItem="tRz-pU-On7" secondAttribute="leading" constant="10" id="r8w-wH-Hmi"/>
+                            <constraint firstItem="Cfo-ma-kgr" firstAttribute="top" secondItem="tRz-pU-On7" secondAttribute="top" constant="10" id="rZ6-HQ-Jjw"/>
+                            <constraint firstItem="tRz-pU-On7" firstAttribute="trailing" secondItem="TWa-zz-oM1" secondAttribute="trailing" constant="10" id="seg-Yp-n28"/>
+                            <constraint firstItem="TWa-zz-oM1" firstAttribute="top" secondItem="Cfo-ma-kgr" secondAttribute="bottom" constant="20" id="x3a-wU-jS5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b5v-10-2Fr">
+                        <barButtonItem key="rightBarButtonItem" title="2022" id="U6U-ft-iie">
+                            <connections>
+                                <segue destination="JaI-VG-bfJ" kind="show" id="QY7-vb-sYY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fullLabel" destination="TWa-zz-oM1" id="y9D-Y2-9XR"/>
+                        <outlet property="shortLabel" destination="Cfo-ma-kgr" id="fGz-26-f17"/>
+                        <outlet property="signImageView" destination="8UP-Dl-Zdw" id="fNY-tL-Sgr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ot9-Kl-Jvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475" y="15"/>
+        </scene>
+        <!--More Sign View Controller-->
+        <scene sceneID="Ten-9M-Gh7">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="JaI-VG-bfJ" customClass="MoreSignViewController" customModule="horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u8V-JR-b3n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7UZ-ni-lh4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JzX-dN-CF8">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hKo-Wg-90K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JzX-dN-CF8" firstAttribute="top" secondItem="hKo-Wg-90K" secondAttribute="top" constant="10" id="6cS-y4-Jcb"/>
+                            <constraint firstItem="7UZ-ni-lh4" firstAttribute="top" secondItem="hKo-Wg-90K" secondAttribute="top" id="7cG-nh-nVc"/>
+                            <constraint firstItem="JzX-dN-CF8" firstAttribute="leading" secondItem="hKo-Wg-90K" secondAttribute="leading" constant="10" id="GPN-an-SxA"/>
+                            <constraint firstItem="hKo-Wg-90K" firstAttribute="bottom" secondItem="JzX-dN-CF8" secondAttribute="bottom" constant="10" id="QC4-wg-w6s"/>
+                            <constraint firstItem="hKo-Wg-90K" firstAttribute="bottom" secondItem="7UZ-ni-lh4" secondAttribute="bottom" id="TrT-Ax-vfg"/>
+                            <constraint firstItem="7UZ-ni-lh4" firstAttribute="leading" secondItem="hKo-Wg-90K" secondAttribute="leading" id="aVr-bK-yhK"/>
+                            <constraint firstItem="hKo-Wg-90K" firstAttribute="trailing" secondItem="7UZ-ni-lh4" secondAttribute="trailing" id="lgR-0S-VGH"/>
+                            <constraint firstItem="hKo-Wg-90K" firstAttribute="trailing" secondItem="JzX-dN-CF8" secondAttribute="trailing" constant="10" id="nNq-pb-ub5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9jB-Nf-9jc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="doc.text" catalog="system" id="r9V-IH-sDS">
+                            <connections>
+                                <segue destination="nnJ-BE-seI" kind="unwind" unwindAction="unwindWithSegue:" id="SOE-xA-gIK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="forecastLabel" destination="JzX-dN-CF8" id="di4-0D-aNu"/>
+                        <outlet property="signImageView" destination="7UZ-ni-lh4" id="qvd-8c-aAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVR-BB-Gdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nnJ-BE-seI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="13"/>
+        </scene>
+        <!--All-->
+        <scene sceneID="iXN-Mz-0C9">
+            <objects>
+                <navigationController storyboardIdentifier="DeveloperTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yaq-Hm-pnQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="All" image="doc.text" catalog="system" id="9hY-2Q-SkD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kwM-aj-Fk7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="41f-ZI-och" kind="relationship" relationship="rootViewController" id="8qq-om-cHj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mg-LB-GjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1972" y="13"/>
         </scene>
     </scenes>
     <resources>
-        <image name="circle.hexagongrid.circle" catalog="system" width="128" height="121"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
