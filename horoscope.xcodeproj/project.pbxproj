@@ -121,9 +121,9 @@
 		CC8354082786EE76007EE4E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CC835423278AE965007EE4E3 /* Developers */,
 				CC8354142786F99C007EE4E3 /* Main */,
 				CC8354152786F9BC007EE4E3 /* AllSigns */,
+				CC835423278AE965007EE4E3 /* Developers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
